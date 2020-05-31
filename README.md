@@ -1,3 +1,3 @@
 # Cosmos App
 
-App for learning golang and cosmos.
+App for learning Golang and Cosmos SDK.
