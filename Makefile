@@ -1,8 +1,12 @@
 all: install
 
 install: go.sum
-		go install -mod=readonly ./cmd/appd
-		go install -mod=readonly ./cmd/appcli
+	go install -mod=readonly ./cmd/appd
+	go install -mod=readonly ./cmd/appcli
+
+build:
+	go build -o out/appd ./cmd/appd
+	go build -o out/appcli ./cmd/appcli
 
 go.sum: go.mod
 	@echo "--> Checking dependencies"
