@@ -1,12 +1,19 @@
 package app
 
 import (
+	"fmt"
+	"os"
 	"testing"
 
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/tendermint/libs/log"
 	dbm "github.com/tendermint/tm-db"
 )
+
+func TestMain(m *testing.M) {
+	fmt.Print("app test\n")
+	os.Exit(m.Run())
+}
 
 func TestMakeCodec(t *testing.T) {
 	cdc := MakeCodec()
